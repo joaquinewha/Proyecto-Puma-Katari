@@ -1,37 +1,34 @@
-// This sample shows adding an action to an [AppBar] that opens a shopping cart.
-
+import 'package:buses_puma_gps/Home.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
+void main()=> runApp(MyApp());
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Code Sample for material.AppBar.actions',
+      title: 'PumaKatari',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: MyStatelessWidget(),
+      home: Home(),
     );
   }
 }
 
 class MyStatelessWidget extends StatelessWidget {
   MyStatelessWidget({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello World'),
+        title: Image.asset("/assets/La_Paz_Bus_logo.svg.png",height: 40.0,),
+        //Text('PumaKatari'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.shopping_cart),
-            tooltip: 'Open shopping cart',
+            icon: Icon(Icons.gps_fixed),
+            tooltip: 'Abre su Ubicacion',
             onPressed: () {
-              // ...
             },
           ),
         ],
@@ -39,3 +36,8 @@ class MyStatelessWidget extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
